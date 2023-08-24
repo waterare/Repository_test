@@ -1,0 +1,33 @@
+{
+    "header": {
+            "timestamp": 1684587443,
+            "version": "V1.0"
+    },
+    "body": {
+            "en_set_smb_chaCur_10mA": 0,
+            "set_smb_disCur_10mA": 14,
+            "set_smb_chaCur_10mA": 0,
+            "online1": {
+                    "start_time": "2023-05-20 09:00:00",
+                    "end_time": "2023-05-20 10:00:00",
+                    "cur_10mA": 0
+            },
+            "online2": {
+                    "start_time": "2023-05-20 11:00:00",
+                    "end_time": "2023-05-20 12:00:00",
+                    "cur_10mA": 0
+            },
+            "offline1": {
+                    "start_time": "2023-05-20 13:00:00",
+                    "end_time": "2023-05-20 14:00:00",
+                    "vol_10mA": 220,
+                    "power": 50
+            },
+            "offline2": {
+                    "start_time": "2023-05-20 17:00:00",
+                    "end_time": "2023-05-20 18:00:00",
+                    "vol_10mA": 220,
+                    "power": 50
+            }
+    }
+}

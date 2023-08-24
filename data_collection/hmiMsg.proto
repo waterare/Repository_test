@@ -1,0 +1,54 @@
+syntax = "proto3";
+
+message HeaderMsg{
+    uint64 timestamp = 1;
+    string version = 2;
+}
+
+message SMBMsg{
+    uint32 smb_id = 1;
+    uint32 vol_10mV = 2;
+    int32 cur_10mA = 3;
+    uint32 soc = 4;
+    int32 tmp = 5;
+}
+
+message HmiMsg{
+    HeaderMsg header = 1;
+    uint32 en_ctrl_start = 2;
+    uint32 out_mode = 3;
+    uint32 dw_vol_mV = 4;
+    uint32 dw_freq_mHz = 5;
+    uint32 dw_cur_mA = 6;
+    uint32 smb_vol_mV = 7;
+    uint32 smb_cur_mA = 8;
+    uint32 smb_freq_mHz = 9;
+    uint32 smb_total_soc = 10;
+    float smb_dw_phase_diff = 11;
+    float pf_val_milli = 12;
+    repeated SMBMsg smb_infos = 13;
+}
+
+message OnlineMsg{
+    string start_time = 1;
+    string end_time = 2;
+    uint32 cur_10mA = 3;
+}
+
+message OfflineMsg{
+    string start_time = 1;
+    string end_time = 2;
+    uint32 vol_10mA = 3;
+    uint32 power = 4;
+}
+
+message HmiConfigMsg{
+    HeaderMsg header = 1;
+    bool en_set_smb_chaCur_10mA = 2;
+    uint32 set_smb_disCur_10mA = 3;
+    uint32 set_smb_chaCur_10mA = 4;
+    OnlineMsg online1 = 5;
+    OfflineMsg offline1 = 6;
+    OnlineMsg online2 = 7;
+    OfflineMsg offline2 = 8;
+}
